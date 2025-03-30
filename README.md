@@ -5,15 +5,17 @@
 
 ### 1. 算法基础
 #### 1.1 多项式朴素贝叶斯
-- **特征独立性假设**：  
-  \[
-  P(x_1, x_2, \cdots, x_n | C) = \prod_{i=1}^n P(x_i | C)
-  \]
-- **贝叶斯定理应用**：  
-  \[
-  P(C|X) = \frac{P(X|C)P(C)}{P(X)} \approx \frac{\prod_{i=1}^n P(x_i | C) P(C)}{P(X)}
-  \]
-  实际计算时忽略分母 \( P(X) \)，通过比较分子大小进行分类决策。
+**特征独立性假设**：
+假设所有特征在给定类别下相互独立：
+$$
+P(x_1, x_2, \ldots, x_n | C)=\prod_{i = 1}^{n} P(x_i | C)
+$$
+
+
+**贝叶斯定理应用**：  
+$$
+P(C|X)=\frac{P(X|C)P(C)}{P(X)}\approx\frac{\prod_{i = 1}^{n}P(x_i|C)P(C)}{P(X)}
+$$
 
 #### 1.2 邮件分类实现
 - **类别定义**：垃圾邮件（标签1）/普通邮件（标签0）
@@ -40,7 +42,7 @@ stopwords = set([line.strip() for line in open('stopwords.txt', 'r', encoding='u
 
 | 特征类型      | 数学表达式               | 实现方式            | 特点         |
 |-----------|---------------------|-----------------|------------|
-| 高频词特征     | fij = 词频)           | CountVectorizer | 直接统计词频     |
+| 高频词特征     |$f_{ij} = \text{词}i\text{在文档}j\text{中的出现次数}$        | CountVectorizer | 直接统计词频     |
 | TF-IDF 特征 | TF - IDF = TF x IDF | TfidfVectorizer | 综合词频与逆文档频率 |
 
 
