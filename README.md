@@ -7,23 +7,17 @@
 #### 1.1 多项式朴素贝叶斯
 **特征独立性假设**：
 假设所有特征在给定类别下相互独立：
-$$
-P(x_1, x_2, \ldots, x_n | C)=\prod_{i = 1}^{n} P(x_i | C)
-$$
+$P(x_1, x_2, \ldots, x_n | C)=\prod_{i = 1}^{n} P(x_i | C)$
 
 
 **贝叶斯定理应用**：  
-$$
-P(C|X)=\frac{P(X|C)P(C)}{P(X)}\approx\frac{\prod_{i = 1}^{n}P(x_i|C)P(C)}{P(X)}
-$$
+$P(C|X)=\frac{P(X|C)P(C)}{P(X)}\approx\frac{\prod_{i = 1}^{n}P(x_i|C)P(C)}{P(X)} $
 
 #### 1.2 邮件分类实现
 - **类别定义**：垃圾邮件（标签1）/普通邮件（标签0）
 - **概率计算**：  
-  \[
-  P(C) = \frac{\text{类别C邮件数}}{\text{总邮件数}}, \quad
-  P(x_i | C) = \frac{\text{词i在C中出现次数}+1}{\text{类别C总词数}+\text{词表大小}}
-  \]
+  
+$P(C) = \frac{\text{类别C邮件数}}{\text{总邮件数}}, \quad P(x_i | C) = \frac{\text{词}i\text{在}C\text{中出现次数}+1}{\text{类别}C\text{总词数}+\text{词表大小}}$
 
 
 
