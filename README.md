@@ -36,8 +36,8 @@ stopwords = set([line.strip() for line in open('stopwords.txt', 'r', encoding='u
 
 | 特征类型      | 数学表达式               | 实现方式            | 特点         |
 |-----------|---------------------|-----------------|------------|
-| 高频词特征     |$f_{ij} = \text{词}i\text{在文档}j\text{中的出现次数}$        | CountVectorizer | 直接统计词频     |
-| TF-IDF 特征 | TF - IDF = TF x IDF | TfidfVectorizer | 综合词频与逆文档频率 |
+| 高频词特征     |$f_{ij} = \text{词}i\text{在文档}j\text{中的出现次数}$       | CountVectorizer | 直接统计词频     |
+| TF-IDF 特征 | $TF - IDF_{ij} = TF_{ij} \times IDF_{j}$ | TfidfVectorizer | 综合词频与逆文档频率 |
 
 
 ### 3.1 数学差异
